@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%      MAIN DOCUMENT CONFIG      %%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{extarticle}
+\usepackage[a4paper,margin=2cm,top=3cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%       GRAPHICS  SETTINGS       %%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{listings}
+\usepackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%        DOCUMENT  CONFIG        %%%%%%%%%%%%%%%%
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[extrafootnotefeatures]{xepersian}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%       FONTS AND GRAPHICS       %%%%%%%%%%%%%%%%
+
+\settextfont{Bahij Nazanin}
+\setlatintextfont[Scale=0.8]{Liberation Serif}
+\setdigitfont{Bahij Nazanin}
+\graphicspath{{images/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%   DOCUMENT SPECIFIC SETTINGS   %%%%%%%%%%%%%%%%
+
+\newcommand{\image}[3]{
+\begin{center}
+\includegraphics[width = 0.8\textwidth]{images/#2}
+
+تصویر #1: #3 
+\end{center}
+}
+
+\newcommand{\imagecs}[4]{
+\begin{center}
+\includegraphics[width = #2\textwidth]{images/#3}
+
+تصویر #1: #4 
+\end{center}
+}
+
+\newcommand{\imagecsref}[5]{
+\begin{center}
+\includegraphics[width = #2\textwidth]{images/#3}
+
+تصویر #1: #4 
+\RTLfootnote{
+منبع تصویر:
+\url{#5}
+}
+\end{center}
+}
